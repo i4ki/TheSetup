@@ -1,0 +1,6 @@
+#!/usr/bin/fish
+
+status=`ip addr show wlp2s0 | head -n1 | awk '{print $9}'`
+
+echo "WIFI: $status"
+

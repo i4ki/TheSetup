@@ -1,0 +1,4 @@
+[general]
+interval = 1
+logging_level = ERROR
+log_file = ~/.config/i3situation/log.txt

@@ -12,7 +12,7 @@ plugin = reddit
 interval = 3
 mode = subreddit
 subreddits = golang,plan9
-color = #808080
+color = #FF8080
 
 [test]
 plugin=run
@@ -24,11 +24,3 @@ plugin=date_time
 time_zone=GMT
 interval=1
 
-[my_battery_plugin]
-plugin=battery
-percentage=True
-battery_path=/sys/class/power_supply/BAT1
-low_color=#FF0000
-discharging_color=#FF6103
-charging_color=#00F000
-full_color=#FFFFFF

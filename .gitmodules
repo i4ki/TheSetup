@@ -1,0 +1,6 @@
+[submodule "emacs/l/i3-emacs"]
+	path = emacs/l/i3-emacs
+	url = git@github.com:tiago4orion/i3-emacs.git
+[submodule "emacs/l/i3-manager"]
+	path = emacs/l/i3-manager
+	url = git@github.com:tiago4orion/i3-manager.el.git

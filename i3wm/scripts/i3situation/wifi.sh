@@ -10,8 +10,8 @@ if [ "x$not_wifi" == "x" ]; then
 fi
 
 if [ "x$connected_at" != "x" ]; then
-    echo "$up_interface: $status | Connected: $connected_at"
+    echo -n "$up_interface: $status | Connected: $connected_at"
 else
-    echo "$up_interface: $status"
+    echo -n "$up_interface: $status"
 fi
 

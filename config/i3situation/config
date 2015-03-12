@@ -9,10 +9,11 @@ text=Enzo is coming!!!
 
 [my_reddit_plugin]
 plugin = reddit
-interval = 3
+interval = 20
 mode = subreddit
 subreddits = golang,plan9
 color = #FF8080
+max_chars=50
 
 [test]
 plugin=run

@@ -64,3 +64,55 @@
 [11/03/2015 03:15:20 PM] - ERROR - status.py - MainThread - write -     
 [11/03/2015 03:15:20 PM] - ERROR - status.py - MainThread - write - elif lock.acquire(block, timeout):
 [11/03/2015 03:15:20 PM] - ERROR - status.py - MainThread - write - KeyboardInterrupt
+[11/03/2015 04:07:55 PM] - ERROR - status.py - Thread-3 - write - Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.4/site-packages/i3situation/core/plugin_manager.py", line 52, in run
+    ret = self.func()
+  File "/usr/lib/python3.4/site-packages/i3situation/plugins/reddit.py", line 77, in main
+    self.selected_submission = self.submissions.pop()
+IndexError: pop from empty list
+
+[11/03/2015 04:25:16 PM] - ERROR - status.py - Thread-3 - write - Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.4/site-packages/i3situation/core/plugin_manager.py", line 52, in run
+    ret = self.func()
+  File "/usr/lib/python3.4/site-packages/i3situation/plugins/reddit.py", line 77, in main
+    self.selected_submission = self.submissions.pop()
+IndexError: pop from empty list
+
+[11/03/2015 04:35:13 PM] - ERROR - status.py - Thread-3 - write - Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.4/site-packages/i3situation/core/plugin_manager.py", line 52, in run
+    ret = self.func()
+  File "/usr/lib/python3.4/site-packages/i3situation/plugins/reddit.py", line 77, in main
+    self.selected_submission = self.submissions.pop()
+IndexError: pop from empty list
+
+[12/03/2015 08:21:56 PM] - ERROR - status.py - Thread-3 - write - Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/threading.py", line 920, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.4/site-packages/i3situation/core/plugin_manager.py", line 52, in run
+    ret = self.func()
+  File "/usr/lib/python3.4/site-packages/i3situation/plugins/reddit.py", line 71, in main
+    self.manage_submissions()
+  File "/usr/lib/python3.4/site-packages/i3situation/plugins/reddit.py", line 112, in manage_submissions
+    self.submissions += self.get_submissions(url)
+  File "/usr/lib/python3.4/site-packages/i3situation/plugins/reddit.py", line 124, in get_submissions
+    submissions = [x['data'] for x in response.json()['data']['children']]
+  File "/usr/lib/python3.4/site-packages/requests/models.py", line 799, in json
+    return json.loads(self.text, **kwargs)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+

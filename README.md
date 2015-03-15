@@ -24,7 +24,7 @@ mv ~/.config/fish ~/fish-bkp
 
 # symlink for use TheSetup configurations
 ln -sf $THESETUP_PATH/emacs ~/.emacs.d/
-ln -sf $THESETUP_PATH/i3 ~/.i3
+ln -sf $THESETUP_PATH/i3wm ~/.i3
 ln -sf $THESETUP_PATH/.config/fish ~/.config/fish
 
 restart X and your $EDITOR

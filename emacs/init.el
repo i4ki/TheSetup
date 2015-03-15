@@ -29,6 +29,7 @@
 (setq make-backup-files nil)
 (menu-bar-mode 0)
 (tool-bar-mode 0)
+(column-number-mode t)
 (require 'ido)
 (ido-mode t)
 

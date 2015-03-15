@@ -43,7 +43,7 @@
 (global-set-key (kbd "C-c C-w") 'i3-manager-find-window)
 
 ;; Go
-(require 'go-mode-load)
+(require 'go-mode-autoloads)
 
 (add-hook 'go-mode-hook (lambda ()
 			  (add-hook 'before-save-hook 'gofmt-before-save)

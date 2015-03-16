@@ -22,6 +22,14 @@ color = #FFFFFF
 
 [date]
 plugin=date_time
-time_zone=GMT
+time_zone=America/Sao_Paulo
 interval=1
 
+[my_battery_plugin]
+plugin=battery
+percentage=True
+battery_path=/sys/class/power_supply/BAT1
+low_color=#FF0000
+discharging_color=#FF6103
+charging_color=#00F000
+full_color=#FFFFFF

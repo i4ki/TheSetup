@@ -1,2 +1,6 @@
 __pycache__
 config/fish/*history*
+emacs/auto-save-list/
+emacs/ido.last
+i3wm/config
+emacs/ac-comphist.dat

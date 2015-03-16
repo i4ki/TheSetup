@@ -1,6 +1,6 @@
 #!/bin/bash
 
-up_interface=`ip addr | grep "state UP " | awk '{print $2}' | sed 's/://g' | grep -v 'docker0' | grep -v 'veth'`
+up_interface=`ip addr | grep "state UP " | awk '{print $2}' | sed 's/://g' | grep -v 'docker' | grep -v 'veth'`
 status=`ip addr show $up_interface | head -n1 | awk '{print $9}'`
 not_wifi=`iwconfig $up_interface 2>&1 | grep "no wireless extensions."`
 connected_at=""

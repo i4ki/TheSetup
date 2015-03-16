@@ -29,6 +29,7 @@
 (setq make-backup-files nil)
 (menu-bar-mode 0)
 (tool-bar-mode 0)
+(column-number-mode t)
 (require 'ido)
 (ido-mode t)
 
@@ -46,6 +47,7 @@
 (require 'go-mode-load)
 
 (add-hook 'go-mode-hook (lambda ()
+			  (setq gofmt-command "goimports")
 			  (add-hook 'before-save-hook 'gofmt-before-save)
 			  ; Customize compile command to run go build
 			  (if (not (string-match "go" compile-command))

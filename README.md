@@ -6,6 +6,7 @@ This repo organize my development setup
 - Go >= 1.4
 - goflymake - go get -u github.com/dougm/goflymake
 - gocode - go get -u github.com/nsf/gocode
+- goimports - go get code.google.com/p/go.tools/cmd/goimports
 - i3situation - sudo pip install i3situation
 - i3-py - sudo pip install i3-py
 

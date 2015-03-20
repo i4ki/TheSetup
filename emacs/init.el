@@ -48,7 +48,6 @@
 
 (add-hook 'go-mode-hook (lambda ()
 			  (setq gofmt-command "goimports")
-					; Call Gofmt before saving
 			  (add-hook 'before-save-hook 'gofmt-before-save)
 			  ; Customize compile command to run go build
 			  (if (not (string-match "go" compile-command))

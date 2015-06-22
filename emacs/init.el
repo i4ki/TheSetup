@@ -63,7 +63,16 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+(global-set-key (kbd "C-\\") "λ")
 
+(require 'pretty-mode)
+(require 'markdown-mode)
+
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

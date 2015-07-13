@@ -11,7 +11,7 @@ fn awrite {
 ftmp=`{mktemp /tmp/Agofmt.XXXXXX}
 etmp=`{mktemp /tmp/Agofmt.XXXXXX}
 
-if (aread body | gofmt $*>$ftmp >[2]$etmp) {
+if (aread body | goimports $*>$ftmp >[2]$etmp) {
        # Don't dirty the window if you don't have to
        if (! aread body | cmp /dev/stdin $ftmp >/dev/null >[2=1]) {
                echo -n mark | awrite ctl

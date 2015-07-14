@@ -1,0 +1,4 @@
+#!/bin/bash
+
+acme -l ~/acme.dump
+

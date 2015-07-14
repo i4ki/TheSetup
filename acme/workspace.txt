@@ -1,0 +1,16 @@
+common paths to fast open inside acme
+
+# rio
+/home/i4k/.xinitrc
+/home/i4k/bin/riostart
+/home/i4k/bin/sleeper
+
+# rc
+/home/i4k/lib/profile
+
+# Plan9
+/usr/local/plan9
+
+#Golang $PATH
+projects/go-workspace/
+

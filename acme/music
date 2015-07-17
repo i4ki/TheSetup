@@ -1,0 +1,3 @@
+#!/usr/bin/env rc
+
+spotify >[1=2] >/dev/null &

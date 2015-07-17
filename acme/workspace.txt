@@ -12,5 +12,5 @@ common paths to fast open inside acme
 /usr/local/plan9
 
 #Golang $PATH
-projects/go-workspace/
+/home/i4k/projects/go-workspace/
 

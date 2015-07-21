@@ -1,11 +1,15 @@
 #!/usr/bin/env rc
 
+ps1='% '    # default prompt
+tab='   '   # a tab character
+
 plan9=/usr/local/plan9
 acmepath=$home/acme/
-GOPATH=$home/projects/go-workspace
-GOROOT=$home/projects/personal/go
-path=($path $home/bin $plan9/bin $acmepath $GOPATH/bin $GOROOT/bin)
-TERM=9term
+goroot=$home/projects/3rdparty/go
+GOROOT=$goroot
+gopath=$home/projects/go-workspace
+GOPATH=$gopath
+path=($path $home/bin $acmepath $gopath/bin $goroot/bin $plan9/bin)
 EDITOR=acme
 
 # bash compatibility
@@ -19,11 +23,13 @@ fn dockerclean {
 }
 
 fn gocd {
-	cd $GOPATH/src/$1
+	builtin cd $gopath/src/$1
 }
 
+fn pwd {
+  if(~ $#dir 0)
+    dir=‘{ /bin/pwd}
 
-
-
-
+  echo $dir
+}
 

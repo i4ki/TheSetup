@@ -1,0 +1,4 @@
+#!/bin/rc
+
+synclient 'TouchpadOff=1'
+

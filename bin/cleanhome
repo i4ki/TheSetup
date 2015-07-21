@@ -1,0 +1,45 @@
+#!/usr/local/plan9/bin/rc
+
+fn cleandirs {
+	for(f in $*) {
+		echo 'Removing directory: '^$f
+		rm -rf $f
+	}
+}
+
+trash_files=`{ ls -a | grep '^\..*' | grep -v '^\.\.' | grep -v '^\.$' | grep -v .xinitrc | grep -v lib | grep -v bin | grep -v acme | grep -v \.config | grep -v \.screenlayout | grep -v \.Xauthority | grep -v \.ssh}
+
+echo $trash_files | sed 's/ /\n/g'
+
+echo 'Some shit linux applications create garbage on your '^$home^'.'
+echo 'Do you need remove them? [y,n]'
+opt=`{read}
+
+switch($opt) {
+	case y Y
+		cleandirs $trash_files
+		echo 'Home cleaned!'
+}
+
+safe_dirs=(lib bin acme acme.dump projects Downloads .xinitrc  .Xauthority .config .screenlayout)
+
+home_files=`{lc}
+
+for(f in $home_files) {
+	remove=1
+	for(s in $safe_dirs) {
+		if(~ $f $s) {
+			# don't remove
+			echo 'leaving '^$f
+			remove=0
+		} 
+		
+	}
+
+	if(test $remove '=' 1) {
+		echo 'Are you sure about remove this folder? '^$f
+		opt=`{read}
+		if(test $opt '=' y)
+			cleandirs ($f)
+	}
+}

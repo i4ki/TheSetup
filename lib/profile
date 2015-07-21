@@ -1,14 +1,29 @@
-#!/usr/local/plan9/bin/rc
+#!/usr/bin/env rc
 
 plan9=/usr/local/plan9
 acmepath=$home/acme/
-path=($path $home/bin $plan9/bin)
+GOPATH=$home/projects/go-workspace
+GOROOT=$home/projects/personal/go
+path=($path $home/bin $plan9/bin $acmepath $GOPATH/bin $GOROOT/bin)
+TERM=9term
+EDITOR=acme
 
 # bash compatibility
 LANG=pt_BR.UTF-8
 lang=$LANG
 
 BROWSER=chromium
+
+fn dockerclean {
+	docker ps | grep -v CONTAINER | cut -d' ' -f1 | xargs docker rm -vf
+}
+
+fn gocd {
+	cd $GOPATH/src/$1
+}
+
+
+
 
 
 

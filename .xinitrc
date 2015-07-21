@@ -4,7 +4,7 @@
 
 plumber
 riostart
-rio -term 9term &
+rio -term 9term  -virtuals 5 -grey &
 sleeper
 
 

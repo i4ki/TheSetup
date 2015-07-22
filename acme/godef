@@ -1,0 +1,6 @@
+#!/bin/rc
+
+file=`{doc $* | sed -n -e 2p |  sed 's/\:$//g'}
+echo $file
+plumb $file
+

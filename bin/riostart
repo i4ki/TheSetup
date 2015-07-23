@@ -12,5 +12,7 @@ stats -W 400x100 -lCme &
 # browser
 chromium &
 
+mailfs -t imap.gmail.com
+
 # editor
 acme &

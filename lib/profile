@@ -1,4 +1,4 @@
-#!/usr/local/plan9/bin/rc
+#!/usr/bin/env rc
 
 ps1='% '    # default prompt
 tab='   '   # a tab character
@@ -10,6 +10,7 @@ GOROOT=$goroot
 gopath=$home/projects/go-workspace
 GOPATH=$gopath
 path=($path $home/bin $acmepath $gopath/bin $goroot/bin $plan9/bin)
+EDITOR=acme
 
 # bash compatibility
 LANG=pt_BR.UTF-8
@@ -17,6 +18,9 @@ lang=$LANG
 
 BROWSER=chromium
 
+fn dockerclean {
+	docker ps | grep -v CONTAINER | cut -d' ' -f1 | xargs docker rm -vf
+}
 
 fn gocd {
 	builtin cd $gopath/src/$1

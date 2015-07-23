@@ -1,8 +1,8 @@
-#!/usr/local/plan9/bin/rc
+#!/bin/rc
 
-machinename=`{hostname}
+machinename=`{ hostname }
 
-if(~ $machinename 'i4k=notebook')
+if(~ $machinename 'i4k-notebook')
 	~/.screenlayout/home.sh
 if not 
 	~/.screenlayout/work.sh

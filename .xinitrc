@@ -2,10 +2,10 @@
 
 machinename=`{ hostname }
 
-if(~ $machinename 'i4k-notebook')
-	~/.screenlayout/home.sh
+if(~ $machinename i4k-notebook)
+	$home/.screenlayout/home.sh
 if not 
-	~/.screenlayout/work.sh
+	$home/.screenlayout/work.sh
 
 setxkbmap -model abnt2 -layout br
 

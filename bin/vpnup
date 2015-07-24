@@ -1,0 +1,7 @@
+#!/bin/rc
+
+p=`{ps aux | grep openvpn | grep client}
+
+if(~ $#p 0)
+	sudo openvpn /etc/openvpn/client.conf
+

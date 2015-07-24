@@ -7,21 +7,23 @@ fn cleandirs {
 	}
 }
 
-trash_files=`{ ls -a | grep '^\..*' | grep -v '^\.\.' | grep -v '^\.$' | grep -v .xinitrc | grep -v lib | grep -v bin | grep -v acme | grep -v \.config | grep -v \.screenlayout | grep -v \.Xauthority | grep -v \.ssh}
+trash_files=`{ ls -a | grep '^\..*' | grep -v '^\.\.' | grep -v '^\.$' | grep -v .xinitrc | grep -v lib | grep -v bin | grep -v acme | grep -v \.config | grep -v \.screenlayout | grep -v \.Xauthority | grep -v \.ssh | grep -v \.mozilla | grep -v \.dbus | grep -v \.irssi | grep -v \.gitconfig}
 
 echo $trash_files | sed 's/ /\n/g'
 
-echo 'Some shit linux applications create garbage on your '^$home^'.'
-echo 'Do you need remove them? [y,n]'
-opt=`{read}
+if(~ $trash_files .*) {
+	echo 'Some shit linux applications create garbage on your '^$home^'.'
+	echo 'Do you need remove them? [y,n]'
+	opt=`{read}
 
-switch($opt) {
-	case y Y
-		cleandirs $trash_files
-		echo 'Home cleaned!'
+	switch($opt) {
+		case y Y
+			cleandirs $trash_files
+			echo 'Home cleaned!'
+	}
 }
 
-safe_dirs=(lib bin acme acme.dump projects Downloads .xinitrc  .Xauthority .config .screenlayout)
+safe_dirs=(lib bin acme acme.dump projects Downloads .xinitrc  .Xauthority .config .screenlayout .mozilla .dbus SOON.txt .ssh .gitconfig .irssi)
 
 home_files=`{lc}
 

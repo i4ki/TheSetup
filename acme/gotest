@@ -1,0 +1,17 @@
+#!/bin/rc
+
+directory=$*
+
+if(~ $#directory 0) 
+	directory=./...
+
+
+echo '###############################################'
+echo '################## Tests started ##################'
+echo '###############################################'
+go test '-timeout=120s' -v $directory
+
+if(~ $status '')
+	echo 'Tests successfully'
+if not
+	echo 'Tests failed: '^$status

@@ -1,0 +1,3 @@
+#!/bin/rc
+
+g $1 *.h /sys/include/*.h /sys/include/ape/*.h /sys/include/ape/*/*.h >[2]/dev/null

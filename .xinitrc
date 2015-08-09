@@ -11,7 +11,7 @@ setxkbmap -model abnt2 -layout br
 
 plumber
 riostart
-rio -term 9term -virtuals 5 &
+rio -term 9term -virtuals 5 >[2=1]>$home/rio.log & 
 sleeper
 
 

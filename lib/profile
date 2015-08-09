@@ -12,6 +12,9 @@ GOPATH=$gopath
 path=($path $home/bin $acmepath $gopath/bin $goroot/bin $plan9/bin)
 EDITOR=acme
 
+# Get rid of backspace characters in Unix man output.
+PAGER=nobs
+
 # bash compatibility
 LANG=pt_BR.UTF-8
 lang=$LANG
@@ -22,8 +25,20 @@ fn dockerclean {
 	docker ps | grep -v CONTAINER | cut -d' ' -f1 | xargs docker rm -vf
 }
 
+# golang stuff
 fn gocd {
 	builtin cd $gopath/src/$1
+}
+
+# git stuff
+fn gitp {
+	remote=$*(1)
+	branch=$*(2)
+
+	if(~ $#remote 0) remote=origin
+	if(~ $#branch 0) branch=master
+	
+	git pull $remote $branch
 }
 
 fn pwd {

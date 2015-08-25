@@ -1,18 +1,7 @@
 #!/usr/local/plan9/bin/rc
 
-# clock in lower right corner
-xclock  -geometry 164x164-40-20 &
-
-# terminal
-9term &
-
 # stats 
 stats -W 400x100 -lCme &
 
-# browser
-chromium &
-
 mailfs -t imap.gmail.com
 
-# editor
-acme &

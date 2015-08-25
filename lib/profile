@@ -11,9 +11,10 @@ gopath=$home/projects/go-workspace
 GOPATH=$gopath
 path=($path $home/bin $acmepath $gopath/bin $goroot/bin $plan9/bin)
 EDITOR=acme
-
 # Get rid of backspace characters in Unix man output.
 PAGER=nobs
+SHELL=rc
+TERM=dumb
 
 # bash compatibility
 LANG=pt_BR.UTF-8

@@ -1,3 +1,9 @@
-#!/usr/local/plan9/bin/rc
+#!/bin/bash
 
-make check
+echo -e "\n\n\n\n############### TEST ##############\n"
+if [ -f mkfile ]; then
+	mk check
+else
+	make check
+fi
+

@@ -17,12 +17,6 @@ setxkbmap -model abnt2 -layout br
 
 plumber
 riostart
-rio -virtuals 5 &
+rio -term dmenu_run -virtuals 5 &
 sleeper
-
-
-
-
-
-
 

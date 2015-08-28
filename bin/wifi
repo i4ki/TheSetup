@@ -1,0 +1,3 @@
+#!/bin/rc
+
+terminator -e 'sudo wifi-menu && exit 0'

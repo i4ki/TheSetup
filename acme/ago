@@ -1,0 +1,24 @@
+#!/bin/rc
+
+fn 9read {
+	9p read acme/$winid/$1
+}
+
+fn 9write {
+	9p write acme/$winid/$1
+}
+
+fname=`{9read tag | awk '{print $1}'}
+
+agoimp
+
+# first we save the gofmt'ed file
+echo -n 'put' | 9write ctl
+
+agofmt
+
+
+# first we save the gofmt'ed file
+echo -n 'put' | 9write ctl
+
+golint $fname | 9write errors

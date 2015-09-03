@@ -1,24 +1,29 @@
 #!/bin/rc
 
+# simple function to read info from current acme win
 fn 9read {
 	9p read acme/$winid/$1
 }
 
+# simple function to write to current acme win
 fn 9write {
 	9p write acme/$winid/$1
 }
 
+# get the filename from the current tag
 fname=`{9read tag | awk '{print $1}'}
 
+# agoimp run goimports and leave the buffer "dirty"
 agoimp
 
-# first we save the gofmt'ed file
+# save the modified buffer
 echo -n 'put' | 9write ctl
 
+# format the code using the standard gofmt tool and leave the buffer dirty again
 agofmt
 
-
-# first we save the gofmt'ed file
+# save the buffer again
 echo -n 'put' | 9write ctl
 
+# lint and write errors to the "error buffer" of the current buffer
 golint $fname | 9write errors

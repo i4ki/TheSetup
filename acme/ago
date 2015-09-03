@@ -26,4 +26,6 @@ agofmt
 echo -n 'put' | 9write ctl
 
 # lint and write errors to the "error buffer" of the current buffer
-golint $fname | 9write errors
+# I'm using sed to replace <standard input> with the right filename to
+# enable plumb file+lineno to acme
+golint $fname | sed 's#<standard input>#'^$fname^'#g' | 9write errors

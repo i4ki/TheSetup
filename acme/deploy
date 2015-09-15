@@ -1,0 +1,7 @@
+#!/bin/rc
+
+# one-click deploy
+
+# bazinga, see the mkfile in the project
+mk deploy
+

@@ -1,0 +1,31 @@
+#!/usr/local/plan9/bin/rc
+
+# Execute Put! instead of Put to force write via sudo.
+
+. 9.rc
+dir=acme/acme/$winid
+fn rd {
+	9p read $dir/$1 || { echo 9p failed >[1=2]; exit 9p }
+}
+fn wr {
+	9p write $dir/$1 || { echo 9p failed >[1=2]; exit 9p }
+}
+
+switch($#*){
+case 0
+	tag=`{rd tag}
+	file=$tag(1)
+	if(~ $file '$'*){
+		file=`{eval echo $file}
+		file=$"file
+	}
+case *
+	file=$1
+}
+
+tmp=/tmp/put!.$pid
+echo -n , | wr addr
+rd data >$tmp
+if(sudo cp $tmp $file)
+	echo -n clean | wr ctl
+rm -f $tmp

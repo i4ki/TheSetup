@@ -1,0 +1,39 @@
+PLAN9  = $HOME + "/projects/plan9/plan9port"
+GOPATH = $HOME + "/.gvm/pkgsets/go1.5.3/global"
+GOROOT = $HOME + "/.gvm/gos/go1.5.3"
+LBIN   = $HOME + "/bin"
+PATH   = $PATH + ":/usr/local/bin:" + $LBIN + ":" + $PLAN9 + "/bin:" + $GOROOT + "/bin:" + $GOPATH + "/bin"
+SHELL  = $HOME + "/.gvm/pkgsets/go1.5.3/global/bin/nash"
+LANG   = "en_US.UTF-8"
+
+setenv SHELL
+setenv LANG
+setenv PLAN9
+setenv GOPATH
+setenv GOROOT
+setenv PATH
+
+DEFPROMPT="\033[31mλ>\033[0m "
+
+fn cd(path) {
+        cd $path
+
+        -test -d ./.git
+
+        if $status != "0" {
+                PROMPT = $DEFPROMPT
+        } else {
+                branch <= git rev-parse --abbrev-ref HEAD | xargs echo -n
+                PROMPT = "(" + $branch + ")" + $DEFPROMPT
+        }
+
+        setenv PROMPT
+}
+
+bindfn cd cd
+
+fn gocd(path) {
+        cd $GOPATH + "/src/" + $path
+}
+
+bindfn gocd gocd

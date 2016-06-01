@@ -1,4 +1,4 @@
-#!/bin/rc
+#!/usr/bin/env 9 rc
 
 p=`{ps aux | grep openvpn | grep client}
 

@@ -1,0 +1,511 @@
+bash
+ls
+ls -la
+rfork c {
+id
+}
+zcat /proc/config.gz | grep USER_NS
+zcat /proc/config.gz | grep PID_NS
+rfork c {
+pacman -Ss linux-source
+pacman -Ss linux
+pacman -Ss linux-source
+pacman -Ss kernel-source
+pacman -Ss kernel
+import .projects/TheSetup/kbuild.sh
+import ./projects/TheSetup/kbuild.sh
+ls projects/TheSetup
+ls projects/TheSetup/lib
+ls projects/TheSetup/bin
+import ./projects/TheSetup/bin/kbuild.sh
+startx
+emacs
+terminator
+ls
+import ./kbuild.sh
+echo "lele-lele"
+echo "lele"+"-"+"lala"
+echo "lele"+"-"+"lala" -d
+fname = "out"
+ls > $out
+fn download(version) {
+    wget -c $LINUX_URL + "/linux-" + $version + ".tar.xz" -O "linux-" + $version + ".tar.xz"
+}
+download("4.5.6")
+fn download(version) {
+    LINUX_URL = "https://cdn.kernel.org/pub/linux/kernel/v4.x"
+    wget -c $LINUX_URL + "/linux-" + $version + ".tar.xz" -O "linux-" + $version + ".tar.xz"
+}
+download("4.5.6")
+wifi-menu
+/usr/bin/wifi-menu
+sudo /usr/bin/wifi-menu
+download("4.5.6")
+download("4.5.5")
+import ./kbuild.sh
+ls
+import ./bin/kbuild.sh
+fname    = "linux-" + $version + ".tar.xz"
+version = "4.5"
+fname    = "linux-" + $version + ".tar.xz"
+    builddir = "/tmp/linux-" + $version
+    -test -f $fname
+    sedReplace = "s/^CONFIG_LOCALVERSION=.*/CONFIG_LOCALVERSION="+$name+"/g"
+name="-i4k"
+    sedReplace = "s/^CONFIG_LOCALVERSION=.*/CONFIG_LOCALVERSION="+$name+"/g"
+    canonName   <= echo -n $version | sed "s/\\.//g"
+canonName <= echo -n $version | sed "s/\\.//g"
+canonName <= echo -n 4.5.6 | sed "s/\\.//g"
+echo $canonName
+chromium
+cd
+cd projects
+cd ..
+cd $GOPATH
+gvm use go1.5.3
+pwd
+cd
+cd $GOPATH
+cd src/github.com/NeowayLabs/nash
+make test
+git branch
+git pull --all
+git branch
+git fetch --all
+git branch
+git log
+ls
+make test
+git status
+git add lex.go
+git add lex_test.go
+git commit -m "Fix issue #19"
+git config --global user.email "tiago.natel@neoway.com.br"
+git config --global user.name "Tiago Natel de Moura"
+git commit -m "Fix issue #19"
+git push origin master
+git log
+import /home/i4k/projects/TheSetup/bin/kbuild.sh
+make install
+nash
+import /home/i4k/projects/TheSetup/bin/kbuild.sh
+pwd
+make test
+make install
+test = "out.log"
+ls -l > $test
+nashOF
+nash
+ls -l > $test
+make test
+go generate
+golang.org/x/tools/cmd/stringer
+go get golang.org/x/tools/cmd/stringer
+make test
+go doc os.OpenFile
+go doc io.WriteCloser
+make test
+make install
+nash
+ls -la 
+ls -la > "tcp://localhost:6666"
+git status
+git add cmd.go lex.go lex_test.go node.go parse.go parse_test.go spec.ebnf
+git commit -m "Add redirection by variable. Closes #21"
+git push origin master
+alsamixer
+pwd
+import /home/i4k/bin/kbuild.sh
+go get golang.org/x/tools/cmd/goimports
+go get github.com/rogpeppe/godef
+make test
+make instal
+make install
+nash
+test="out"
+ls > $test
+cat out
+rm out
+
+make install
+nash
+import /home/i4k/bin/kbuild.sh
+make install
+import /home/i4k/bin/kbuild.sh
+nash
+import /home/i4k/bin/kbuild.sh
+make install
+nash
+import /home/i4k/bin/kbuild.sh
+cd /tmp
+bindfn kbuild kbuild
+kbuild "-i4k-kbuild" "4.5.6" ""
+kbuild("-i4k-kbuild", "4.5.6", "")
+nas -debug
+nash -debug
+import /home/i4k/bin/kbuild.sh
+kbuild("-i4k-kbuild", "4.5.6", "")
+shutdown
+shutdown -h now
+startx
+sudo loadkeys br-abnt2
+nano ./nash/init
+gvm use go1.5.3
+bash
+go
+echo $PATH
+ls .gvm
+ls .gvm/gos
+ls .gvm/gos/go1.5.3
+ls .gvm/gos/go1.5.3/bin
+go
+./.gvm/gos/go1.5.3/bin/go
+echo $PATH
+ls
+ls /home/i4k/.gvm/gos/go1.5.3/bin
+/home/i4k/.gvm/gos/go1.5.3/bin/go
+nash -debug
+ls -la
+ls -la .nash
+cat .nash/init
+./gvm/pkgsets/go1.5.3/global/bin/nash -debug
+./.gvm/pkgsets/go1.5.3/global/bin/nash -debug
+echo $PATH
+nano ./.nash/init
+echo $PATH
+import ./.nash/init
+go
+import ./.nash/init
+go
+echo $PATH
+pwd
+reboot
+sudo reboot
+startx
+nano ./.nash/init
+startx
+ls ./local
+ls ./.local
+ls ./.localshare
+ls ./.loca/share
+ls ./.local/share
+ls ./.local/share/xorg
+cat ./.local/share/xorg/Xorg.0.log
+cat ./.nash/init
+echon $PATH
+echo $PATH
+startx
+bash
+startx
+bash
+ip route get 1 | awk "{print $NF;exit}"
+alsamixer
+sudo pacman -Sy base-devel git mesa libx11 libxcb xcb-util-wm xcb-util-image libxrandr xcb-util-renderutil libxkbcommon-x11 freetype2 bzip2
+go get -u -v azul3d.org/examples/...
+gocd azul3d.org
+cd $GOPATH+"/src/azul3d.org"
+ls
+cd exa
+cd examples
+ls
+cd azul3d_triangle
+ls
+go run azul3d_triangle.go
+pwd
+cd ..
+pwd
+cd ..
+cd azul3d.com
+cd azul3d.org
+ls
+cd examples
+ls
+cd azul3d_tmx
+ls
+go run azul3d_tmx.go
+cd ..
+ls
+cd abs
+ls
+go run path.go
+cd ..
+ls
+cd azul3d_clearing
+ls
+go run ./azul3d_clearing.go
+sleep 100
+cd ../..
+pwd
+cd ..
+cdazul3d_
+cd azul3d_
+ls
+cd azul3d.org
+azul3d_clearing
+azul3d_debug_camera
+azul3d_events
+azul3d_mandel
+azul3d_multiwindow
+azul3d_texcoords
+azul3d_info
+azul3d_stencil
+pwd
+cd
+pwd
+cd Downloads
+ls
+chmod +x ./racket-6.5-x86_64-linux.sh
+chmod "+x" ./racket-6.5-x86_64-linux.sh
+ls
+./racket-6.5-x86_64-linux.sh
+sudo ./racket-6.5-x86_64-linux.sh
+./racket-6.5-x86_64-linux.sh
+pwd
+cd ..
+ls
+cd racket
+ls
+ls bin
+./bin/drracket
+pwd
+cd ..
+cd $GOPATH
+cd src/github.com
+cd tiago4orion
+ls
+mkdir tiago4orion
+ls
+cd tiago4orion
+ls
+mkdir engine
+cd engine
+ls
+pwd
+cd ..
+rm -rf engine
+mkdir carsim
+cd carsim
+ls
+mkdir engine
+startx
+showenv
+nano /home/i4k/.nash/init
+showenv
+nano /home/i4k/.nash/init
+startx
+bash
+nano ./nash/.init
+pwd
+nano ./.nash/.init
+nano ./.nash/init
+killall sleeper
+startx
+terminator
+chromium
+emacs
+terminator
+pwd
+ls
+cd projects
+cd
+pwd
+cd $GOPATH+"/src/github.com/NeowayLabs/nash"
+pwd
+git branch
+git pull origin master
+git rev-parse --abbrev-ref HEAD
+pwd
+git rev-parse --abbrev-ref HEAD
+nash
+gocd github.com/NeowayLabs/nash
+pwd
+cd
+gocd github.com/NeowayLabs/nash
+pwd
+nash
+echo $PROMPT
+nash
+git rev-parse --abbrev-ref HEAD
+cd
+git rev-parse --abbrev-ref HEAD
+echo $status
+git rev-parse --abbrev-ref HEAD
+man tr
+echo "test
+pwd
+branch <= -git rev-parse --abbrev-ref HEAD
+branch <= git rev-parse --abbrev-ref HEAD
+echo $branch
+echo $branch | tr "\n" ""
+echo $branch | tr -c "\n" ""
+echo $branch 
+echo $branch | tr a b
+echo $branch | tr "\n" " "
+echo $branch | tr -d "\n"
+echo -n $branch | tr -d "\n"
+echo -n $branch 
+branch <= -git rev-parse --abbrev-ref HEAD
+-echo "a"
+pwd
+cd
+pwd
+make build
+nash
+echo a
+echo $status
+make build
+./cmd/nash/nash
+echo a
+echo $status
+ec
+echo $status
+tr
+echo $status
+pwd
+make install
+nash
+cd .
+cd ..
+pwd
+ls -la
+cd ..
+pwd
+cd ..
+cd
+cd .
+cd ..
+terminator
+gocd github.com/NeowayLabs/nash
+ls
+cd .
+cd cmd
+cd /
+cd ..
+terminator
+cd /
+cd $GOPATH+"/src/github.com/NeowayLabs/nash"
+pwd
+cd cmd
+pwd
+cd ..
+man test
+terminator
+gocd github.com/NeowayLabs/nash
+cd .
+make install
+nash
+ls
+cd .
+cd /
+make install
+pwd
+cd $OLDPWD
+pwd
+gocd github.com/NeowayLabs/nash
+ls
+cd .
+make install
+nash
+cd .
+cd ..
+pwd
+cd nash
+pwd
+cd cmd
+cd ..
+make install
+nash
+cd .
+echo $status
+cd .
+echo $status
+cd /
+ec
+-ec
+test -d ./.git
+-test -d ./.git
+make install
+pwd
+cd $OLDPWD
+pwd
+gocd github.com/NeowayLabs/nash
+make install
+nash
+cd .
+cd cmd
+pwd
+cd ..
+startx
+emacs
+terminator
+gocd github.com/NeowayLabs/nash
+cd(".")
+cd("/")
+pwd
+gocd github.com/NeowayLabs/nash
+pwd
+make install
+nash
+cd("/")
+gocd github.com/NeowayLabs/nash
+cd .
+cd cmd
+cd("cmd")
+cd("./cmd")
+cd("/")
+-test
+make install
+pwd
+gocd github.com/NeowayLabs/nash
+make install
+nash -debug
+cd .
+pwd
+test -d ./.git
+echo $status
+cd /
+pwd
+cd $GOPATH+"/src/github.com/NeowayLabs/nash"
+pwd
+cd .
+cd cmd
+make install
+pwd
+cd ..
+pwd
+make install
+nash
+nash -debug
+pwd
+ls
+nash
+nash -debug
+cd .
+cd cmd
+make install
+nash
+cd .
+cd cmd
+cd ..
+git status
+git add nash.go
+git commit -m "Fix regression, $status variable not working"
+git branch
+make test
+git status
+git push origin master
+sudo wifi-menu
+git push origin master
+cd $HOME
+pwd
+cd bin
+pwd
+cd ..
+git status
+mv $HOME/.nash nash
+ls
+mv $HOME+"/.nash" nash
+ls
+git diff
+git checkout -b home
+git add .xinitrc bin nash

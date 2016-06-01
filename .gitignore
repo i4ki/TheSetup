@@ -1,5 +1,5 @@
-__pycache__
-config/fish/*history*
+nash/history
+onfig/fish/*history*
 emacs/auto-save-list/
 emacs/ido.last
 i3wm/config

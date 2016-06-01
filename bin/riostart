@@ -1,7 +1,3 @@
-#!/usr/local/plan9/bin/rc
+#!/usr/bin/env 9 rc
 
-# stats 
-stats -W 400x100 -lCme &
-
-mailfs -t imap.gmail.com
-
+# nothing here 
